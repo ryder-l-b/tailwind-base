@@ -1,0 +1,152 @@
+@import "lib/_font-awesome.scss";
+@import "~slick-carousel/slick/slick.scss";
+@import "~slick-carousel/slick/slick-theme.scss";
+
+                       
+//  _   ______ ___________
+// | | / / __ `/ ___/ ___/
+// | |/ / /_/ / /  (__  ) 
+// |___/\__,_/_/  /____/  
+
+:root {
+  --primary-color: #2e6fe0; 
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+    @font-face {
+        font-family: 'Metropolis';
+        font-style: normal;
+        font-weight: 500;
+        src: url('../fonts/Metropolis/Metropolis-Regular.woff') format('woff');
+    }
+}
+
+@layer components {  
+    .btn-cyan {
+        @apply bg-cyan-700 inline-block transition-all text-white rounded-3xl text-center font-bold py-2 px-4 hover:opacity-80;
+        &.btn-cyan--arrow {
+            &:after {
+                content: "\f178";
+                @extend .fa;
+                @apply text-xs;
+                padding-left: 13px;
+            }
+        }
+    }   
+    
+    .dropdown {
+        position: relative;
+        &:after {
+            content: "\f0d7";
+            @extend .fa;
+            @apply absolute top-0 right-0 text-warmGray-800 text-2xl h-full w-8 flex justify-center items-center pointer-events-none;
+        }
+    }   
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+//         __       _      
+//   _____/ /_____ ( )_____
+//  / ___/ __/ __ `/// ___/
+// / /__/ /_/ /_/ / (__  ) 
+// \___/\__/\__,_/ /____/  
+
+#form-button {
+  &:after {
+    content: "\f061";
+    @extend .fa;
+    width: 24px;
+    height: 24px;
+    @apply text-lg transition-all absolute my-auto ml-3;
+  }
+  &:hover:after {
+    transform: translateX(1em);
+  }
+}
+
+#field-date {
+  &:after {
+    content: "\f073";
+    @extend .fa;
+  }
+}
+
+/* 
+                                                          __          __  __            
+   ________  _  ____  __   ____ ___  ___  ____  __  __   / /_  __  __/ /_/ /_____  ____ 
+  / ___/ _ \| |/_/ / / /  / __ `__ \/ _ \/ __ \/ / / /  / __ \/ / / / __/ __/ __ \/ __ \
+ (__  )  __/>  </ /_/ /  / / / / / /  __/ / / / /_/ /  / /_/ / /_/ / /_/ /_/ /_/ / / / /
+/____/\___/_/|_|\__, /  /_/ /_/ /_/\___/_/ /_/\__,_/  /_.___/\__,_/\__/\__/\____/_/ /_/ 
+               /____/                                                                   
+ */
+
+.line {
+  fill: none;
+  stroke: var(--primary-color);
+  stroke-width: 6;
+  transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+    stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.line1 {
+  stroke-dasharray: 60 207;
+  stroke-width: 6;
+}
+
+.line2 {
+  stroke-dasharray: 60 60;
+  stroke-width: 6;
+}
+
+.line3 {
+  stroke-dasharray: 60 207;
+  stroke-width: 6;
+}
+
+.opened {
+  .line1 {
+    stroke-dasharray: 90 207;
+    stroke-dashoffset: -134;
+    stroke-width: 6;
+    stroke: black;
+  }
+
+  .line2 {
+    stroke-dasharray: 1 60;
+    stroke-dashoffset: -30;
+    stroke-width: 6;
+    stroke: black;
+  }
+  .line3 {
+    stroke-dasharray: 90 207;
+    stroke-dashoffset: -134;
+    stroke-width: 6;
+    stroke: black;
+  }
+} 
+.space-slider {
+    /* the slides */
+    .slick-slide {
+        margin: 0 15px;
+    }
+    /* the parent */
+    .slick-list {
+        margin: 0 -15px;
+    }
+    .slick-slider {
+        overflow: hidden;
+    }
+}
+
+.text-shadow {
+  text-shadow: 0.025em 0.025em 0.3em black;
+}

@@ -1,0 +1,10 @@
+node_modules
+/css
+/fonts
+/images
+/includes
+/*.php
+/js
+/node_modules
+/dist
+**/.DS_Store
