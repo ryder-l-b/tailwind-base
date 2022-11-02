@@ -1,7 +1,7 @@
 {
-  "name": "Tailwind Base",
+  "name": "tailwind-base",
   "version": "1.0.0",
-  "description": "Tailwind Starter - with Laravel-Mix",
+  "description": "Tailwind Starter - with Laravel-Mix & Alpinejs",
   "main": "default.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

@@ -8,3 +8,6 @@ node_modules
 /node_modules
 /dist
 **/.DS_Store
+
+# remove the hash from this line if the Assets file gets too large
+#_working/Assets.ai
