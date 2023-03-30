@@ -1,20 +1,4 @@
 {
     "/js/default.js": "/js/default.js",
-    "/css/style.css": "/css/style.css",
-    "/fonts/FontAwesome.otf": "/fonts/FontAwesome.otf",
-    "/fonts/fontawesome-webfont.eot": "/fonts/fontawesome-webfont.eot",
-    "/fonts/fontawesome-webfont.svg": "/fonts/fontawesome-webfont.svg",
-    "/fonts/fontawesome-webfont.ttf": "/fonts/fontawesome-webfont.ttf",
-    "/fonts/fontawesome-webfont.woff": "/fonts/fontawesome-webfont.woff",
-    "/fonts/fontawesome-webfont.woff2": "/fonts/fontawesome-webfont.woff2",
-    "/images/banners/hero-bg.jpg": "/images/banners/hero-bg.jpg",
-    "/images/logo/logo-long.png": "/images/logo/logo-long.png",
-    "/images/logo/logo-main.png": "/images/logo/logo-main.png",
-    "/images/logo/site-icon.png": "/images/logo/site-icon.png",
-    "/includes/footer.php": "/includes/footer.php",
-    "/includes/head.php": "/includes/head.php",
-    "/includes/header.php": "/includes/header.php",
-    "/includes/modal.php": "/includes/modal.php",
-    "/includes/script.php": "/includes/script.php",
-    "/index.php": "/index.php"
+    "/css/style.css": "/css/style.css"
 }

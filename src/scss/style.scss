@@ -1,8 +1,7 @@
-@import "lib/_font-awesome.scss";
-@import "~slick-carousel/slick/slick.scss";
-@import "~slick-carousel/slick/slick-theme.scss";
+//@import "~blaze-slider/dist/blaze.css";
+@import "lib/fa-all.css";
 
-                       
+
 //  _   ______ ___________
 // | | / / __ `/ ___/ ___/
 // | |/ / /_/ / /  (__  ) 
@@ -24,15 +23,18 @@
         font-weight: 500;
         src: url('../fonts/Metropolis/Metropolis-Regular.woff') format('woff');
     }
+
+  html {
+    scroll-behavior: smooth;
+  }
 }
 
 @layer components {  
     .btn-cyan {
         @apply bg-cyan-700 inline-block transition-all text-white rounded-3xl text-center font-bold py-2 px-4 hover:opacity-80;
-        &.btn-cyan--arrow {
+        &.-arrow {
             &:after {
                 content: "\f178";
-                @extend .fa;
                 @apply text-xs;
                 padding-left: 13px;
             }
@@ -43,16 +45,11 @@
         position: relative;
         &:after {
             content: "\f0d7";
-            @extend .fa;
             @apply absolute top-0 right-0 text-warmGray-800 text-2xl h-full w-8 flex justify-center items-center pointer-events-none;
         }
     }   
 }
 
-
-html {
-  scroll-behavior: smooth;
-}
 
 //         __       _      
 //   _____/ /_____ ( )_____
@@ -63,7 +60,6 @@ html {
 #form-button {
   &:after {
     content: "\f061";
-    @extend .fa;
     width: 24px;
     height: 24px;
     @apply text-lg transition-all absolute my-auto ml-3;
@@ -76,7 +72,6 @@ html {
 #field-date {
   &:after {
     content: "\f073";
-    @extend .fa;
   }
 }
 

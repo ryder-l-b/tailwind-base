@@ -6,24 +6,24 @@ require('laravel-mix-tailwind');
 
 if (mix.inProduction()) {
     OutputDir = 'dist';
-    IncOutputDir = 'dist/includes';
-    JsOutputDir = 'dist/js';
-    CssOutputDir = 'dist/css';
-    ImgOutputDir = 'dist/images';
-    FontOutputDir = 'dist/fonts';
-} else {
-    OutputDir = '';
-    IncOutputDir = 'includes';
     JsOutputDir = 'js';
     CssOutputDir = 'css';
-    ImgOutputDir = 'images';
-    FontOutputDir = 'fonts';
+    //IncOutputDir = 'dist/partials';
+    //ImgOutputDir = 'dist/images';
+    //FontOutputDir = 'dist/fonts';
+} else {
+    OutputDir = '';
+    JsOutputDir = 'js';
+    CssOutputDir = 'css';
+    //IncOutputDir = 'partials';
+    //ImgOutputDir = 'images';
+    //FontOutputDir = 'fonts';
 }
 
-mix.copyDirectory('src/fonts', FontOutputDir);
-mix.copyDirectory('src/images', ImgOutputDir);
-mix.copyDirectory('src/includes', IncOutputDir);
-mix.copy('src/*.php', OutputDir);
+//mix.copyDirectory('src/fonts', FontOutputDir);
+//mix.copyDirectory('src/images', ImgOutputDir);
+//mix.copyDirectory('src/partials', IncOutputDir);
+//mix.copy('src/*.php', OutputDir);
 
 mix.js(['src/js/default.js'], JsOutputDir)
     .sass('src/scss/style.scss', CssOutputDir)
@@ -32,12 +32,12 @@ mix.js(['src/js/default.js'], JsOutputDir)
         processCssUrls: false
     })
     .browserSync({
-        proxy: 'http://localhost:8888/tailwind-base',
+        proxy: 'http://tailwind-base.test', //virtual host from MAMP MacOS or Laragon Win11
         files: [
             OutputDir+'css/style.css',  // Generated .css file
             OutputDir+'js/default.js',    // Generated .js file
             OutputDir+'*.php',
-            OutputDir+'includes/*.php'
+            OutputDir+'partials/*.php'
             // =====================================================================
             // You probably need only one of the below lines, depending
             // on which platform this project is being built upon.
